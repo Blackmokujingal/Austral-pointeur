@@ -1,6 +1,6 @@
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDl1tUbNi6Z9gpFjluDUDC5cf_KrRNimbg",
+  apiKey: process.env.REACT_APP_FIREBASE_KEY,
   authDomain: "austral-pointeur-917a4.firebaseapp.com",
   projectId: "austral-pointeur-917a4",
   storageBucket: "austral-pointeur-917a4.appspot.com",
@@ -9,3 +9,4 @@ const firebaseConfig = {
   measurementId: "G-W2C28PVT5Q",
 };
 
+export default firebaseConfig
