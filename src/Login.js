@@ -5,6 +5,7 @@ import 'firebase/compat/auth';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from './context/AuthContext';
 import firebaseConfig from './database/firebase.js'
+import { css } from './Styles/app_styles';
 
 
 
@@ -41,20 +42,20 @@ const Login = () => {
   return (
     <form onSubmit={handleSubmit} className="flex space-x-4">
       <input
-      className="border p-2"
+      className={css._input}
         type="email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="Email"
       />
       <input
-      className="border p-2"
+      className={css._input}
         type="password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
         placeholder="Password"
       />
-      <button className="rounded-full bg-blue-800  font-semibold text-white ease-linear transform  transition duration-250 hover:scale-95 p-3 " type="submit"> Login </button>
+      <button className= {css._button} type="submit"> Login </button>
       {error && <span className='font-semibold flex items-center text-red-600'>Wrong email or password. <br/> Please try again.</span>}
     </form>
   );

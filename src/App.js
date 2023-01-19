@@ -1,10 +1,11 @@
 import "./App.css";
 import { Route, Routes, Navigate } from "react-router-dom";
-import Pointeur from "./Pointeur";
+import Pointeur from "./CheckIn";
 import Login from "./Login";
 import Navbar from "./Navbar";
 import { AuthContext } from "./context/AuthContext";
 import { useContext } from "react";
+import CheckIn from "./CheckIn";
 
 function App() {
 
@@ -17,15 +18,15 @@ function App() {
   console.log(currentUser)
 
   return (
-    <div>
+    <div className="bg-gray-800 ">
       <Routes>
         <Route path="/" element={<Navbar />}>
           <Route path="Login" element={<Login />} />
           <Route index element={
             <RequireAuth>
-              <Pointeur />
+              <CheckIn/>
             </RequireAuth>} />
-          <Route path="Pointeur" element={<Pointeur />} />
+          <Route path="Pointeur" element={<CheckIn />} />
         </Route>
       </Routes>
     </div>

@@ -1,11 +1,16 @@
 import { Link, Outlet } from 'react-router-dom';
+import { css } from './Styles/app_styles';
+
 
 function Navbar() {
     return (
       <div >
-        <nav className='p-2 flex justify-evenly bg-blue-800  '>
-         <div className=' font-semibold text-white p-3 ease-linear transform hover:scale-95 transition duration-250'><Link to="/">Pointeur</Link>      </div>
-         <div className='font-semibold text-white p-3 ease-linear transform hover:scale-95 transition duration-250'><Link to="/login">Login</Link>      </div>
+        <nav className='p-2 flex bg-black '>
+         <div> 
+         <img src='logoAE.png' alt='logo' className='flex h-14 m-2'/>
+         </div>
+         <div className= {css._navBarTittle} ><Link to="/">Check In</Link>      </div>
+         <div className= {css._navBarTittle} ><Link to="/login">Login</Link>      </div>
         </nav>
   
         <hr />
@@ -15,7 +20,7 @@ function Navbar() {
         </div>
         
       </div>
-    );
+    );  
   }
 
   export default Navbar;
