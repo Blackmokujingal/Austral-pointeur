@@ -56,11 +56,9 @@ const Login = () => {
         placeholder="Password"
       />
       <button className= {css._button} type="submit"> Login </button>
-      {error && <span className='font-semibold flex items-center text-red-600'>Wrong email or password. <br/> Please try again.</span>}
+      {error && <span className='font-semibold flex items-center text-red-600 text-center'>Wrong email or password. <br/> Please try again.</span>}
     </form>
   );
 };
 
 export default Login;
-
-
